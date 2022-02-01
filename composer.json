@@ -1,0 +1,49 @@
+{
+    "name": "justenough/craft-envfield",
+    "description": "A drop-in replacement for plaintext fields with environment variable support, inc autosuggest",
+    "type": "craft-plugin",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "env field"
+    ],
+    "support": {
+        "docs": "https://github.com/justenoughco/craft-envfield/blob/master/README.md",
+        "issues": "https://github.com/justenoughco/craft-envfield/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Just Enough Consulting",
+            "homepage": "https://justenough.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "justenough\\envfield\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Env Field",
+        "handle": "envfield",
+        "developer": "Just Enough Consulting",
+        "developerUrl": "https://justenough.co",
+        "documentationUrl": "https://github.com/justenoughco/craft-envfield/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/justenoughco/craft-envfield/master/CHANGELOG.md",
+        "class": "justenough\\envfield\\EnvField"
+    },
+    "require": {
+        "php": "^7.4 | ^8.0"
+    },
+    "require-dev": {
+        "craftcms/cms": "^3.6",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.4"
+    },
+    "scripts": {
+        "phpstan": "vendor/bin/phpstan analyse",
+        "cs": "vendor/bin/php-cs-fixer fix src --allow-risky=yes"
+    }
+}

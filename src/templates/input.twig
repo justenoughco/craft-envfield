@@ -1,0 +1,38 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Env Field plugin for Craft CMS 3.x
+ *
+ * Env Field Input
+ *
+ * @author    Just Enough Consulting
+ * @copyright Copyright (c) 2022 Just Enough Consulting
+ * @link      https://justenough.co
+ * @package   EnvField
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+
+{%- set class = [field.code ? 'code']|filter %}
+
+
+{{ forms.autosuggestField({
+    id: id,
+    describedBy: field.describedBy,
+    suggestEnvVars: false,
+    suggestions: suggestions,
+    name: name,
+    value: value,
+    class: class,
+    maxlength: field.charLimit,
+    showCharsLeft: true,
+    placeholder: field.placeholder ? field.placeholder|t('site'),
+    required: field.required,
+    orientation: orientation ?? null,
+    tip: field.tip,
+    warning: field.warning,
+}) }}
+

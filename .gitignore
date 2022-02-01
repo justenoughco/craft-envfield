@@ -1,0 +1,19 @@
+# CRAFT ENVIRONMENT
+.env.php
+.env.sh
+.env
+
+# COMPOSER
+/vendor
+
+# BUILD FILES
+/build/*
+
+# MISC FILES
+.cache
+.DS_Store
+.idea
+.settings
+*.sublime-workspace
+*.sublime-project
+.php-cs-fixer.cache
