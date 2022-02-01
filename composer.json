@@ -1,6 +1,6 @@
 {
     "name": "justenough/craft-envfield",
-    "description": "A drop-in replacement for plaintext fields with environment variable support, inc autosuggest",
+    "description": "A drop-in replacement for CraftCMS plain text fields with environment variable support, inc autosuggest",
     "type": "craft-plugin",
     "keywords": [
         "craft",
