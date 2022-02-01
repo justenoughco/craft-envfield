@@ -6,11 +6,13 @@ Provides a(n almost completely\*) drop-in replacement for Craft's built-in plain
 
 ## Why?
 
-Sometimes you have values that need to be managed on a per-entry basis, but which need to vary by environment (e.g. ID's in external systems / API's). This field allows you to store those ID's [in environment variables](https://12factor.net/), and have everything work as expected when moving data between environments.
+Sometimes you have values that need to be managed on a per-entry basis, but which need to vary by environment (e.g. ID's in external systems / API's). This field allows you to store those ID's [in environment variables](https://12factor.net/config), and have everything work as expected when moving data between environments.
 
-![Screenshot](resources/img/plugin-logo.png)
+![Example #1](resources/img/field-example.png)
 
-\* Multi-line plain text fields are not supported
+![Example #2](resources/img/field-expanded-example.png)
+
+\* Multi-line plain text fields aren't supported
 
 ## Caution
 
@@ -18,7 +20,7 @@ Environment Variables may contain sensitive information, including passwords and
 
 If not used carefully, the fieldtype makes it trivially easy to leak information from Environment Variables into your front end templates. Depending on the value(s) leaked, this could cause Very Bad Things To Happen.
 
-This plugin does it's best not to help you to shoot yourself in the foot by automatically filtering the autosuggested environment variable names to remove common sensitive values that are unlikely to be used as field values in the course of normal usage (see [the config section](#config) below for details), but ultimately you are responsible for your use of this plugin.
+This plugin does it's best not to help you to shoot yourself in the foot by automatically filtering the autosuggested environment variable names to remove common sensitive values that are unlikely to be used as field values in the course of normal usage (see [the config section](#config-settings) below for details), but ultimately you are responsible for your use of this plugin.
 
 Make sure that you...
 
