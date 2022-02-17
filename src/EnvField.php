@@ -71,7 +71,7 @@ class EnvField extends Plugin
     }
 
     /**
-     * Copies example config to project's config folder
+     * Copy example config to project's config folder
      */
     protected function afterInstall(): void
     {
